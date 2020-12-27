@@ -16,3 +16,14 @@
 4. References
 
     Provide any references relevant to the report.
+
+some notes on how people hold their phones
+from [UX matters](https://www.uxmatters.com/mt/archives/2017/03/design-for-fingers-touch-and-people-part-1.php)
+We also need to avoid having misses cause problems, so accept the fact that failures, mistakes, and imprecision exist. Account for mistakes by placing dangerous or unrelated items far from other items, thus eliminating or reducing the consequences of accidental taps.
+[Also these 10 heuristics for UX design are worth considering for the mobile development.](https://www.uxmatters.com/mt/archives/2017/07/design-for-fingers-touch-and-people-part-3.php)
+
+a way to think of a hierarchy of interaction
+
+    selectable rows with arrows to the right—These items load other pages or more details.
+    underlined text—These items load additional, helpful information inline.
+    buttons—These submit data or change state.
