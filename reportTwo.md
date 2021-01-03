@@ -55,3 +55,11 @@ a way to think of a hierarchy of interaction
     selectable rows with arrows to the right—These items load other pages or more details.
     underlined text—These items load additional, helpful information inline.
     buttons—These submit data or change state.
+
+## Weather & Location 
+
+[Using fetch for a weather app](https://bithacker.dev/fetch-weather-openweathermap-api-javascript)
+[A simple weather JSON parsing app](https://medium.com/swlh/a-simple-javascript-weather-application-and-json-parsing-abd21ff0ea9a)
+[OPen weather API](https://openweathermap.org/appid)
+[National weather service weather api](https://www.weather.gov/documentation/services-web-api)
+[Geolocation api](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
