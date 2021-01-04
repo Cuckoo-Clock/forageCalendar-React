@@ -63,3 +63,4 @@ a way to think of a hierarchy of interaction
 * [OPen weather API](https://openweathermap.org/appid)
 * [National weather service weather api](https://www.weather.gov/documentation/services-web-api)
 * [Geolocation api](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
+* [openweathermap app from kirupa](https://github.com/kirupa/kirupa/tree/master/reactjs/weather)
