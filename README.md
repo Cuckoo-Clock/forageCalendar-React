@@ -33,8 +33,43 @@ setState merges with existing state object, while useState rewrites the object a
   > const prop = 'name';
   > const { [prop]: name } = hero;
   > name; // => 'Batman'
-  > const { [prop]: name } = hero is an object destructuring that assigns to variable name the value hero[prop], where prop is a variable holding the property name.`
+  > const { [prop]: name } = hero is an object destructuring that assigns to variable name the value hero[prop], where prop is a variable holding the property name.
 
 * [Passing values into onclick](https://ozmoroz.com/2018/07/pass-value-to-onclick-react/) can be achieve through targeting the element or data-attributes.
 * [DnD with React](https://engineering.datorama.com/mastering-drag-drop-with-reactjs-part-01-39bed3d40a03)
 
+* __Updating State based on Previous State__ : 
+ It can be handled outside of setState  
+ ``` class ButtonCounter extends Component {
+  constructor() {
+    super()
+    // initial state has count set at 0
+    this.state = {
+      count: 0
+    }
+  }
+
+  handleClick = () => {
+    // when handleClick is called, newCount is set to whatever this.state.count is plus 1 PRIOR to calling this.setState
+    let newCount = this.state.count + 1
+    this.setState({
+      count: newCount
+    })
+  }
+  ```
+ but react provides the ability to pass a function into setState, which recieves the component state, which in the form of an arrow function commonly renaming the param as `previousState` or `prevState` 
+ ```this.setState(prevState => {
+ return(
+  someValue: prevState.someValue+1
+ )}
+)
+```
+much more effecient.
+
+* lifting up state
+ * Shared state should be held in the heightest component and passed down through props.
+
+ * alternatively in much more complex scenarios redux can create a state store which any componenet in any generation can subscribe too.
+
+##### deep learning that is beyond the scope of this project, but should be aware of
+[XXS protections](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
