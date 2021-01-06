@@ -4,47 +4,44 @@ import Calendar from "./components/Calendar";
 import Logbook from "./components/Logbook";
 import Fieldguide from "./components/Fieldguide";
 import Maps from "./components/Maps";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import Header from './components/Header';
+import Footer from "./components/Footer";
+import Resources from './components/Reources';
+import Lost from "./components/Lost";
+import Contact from "./components/Contact";
+import React, { useState } from 'react';
 
 function App() {
-  return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/calendar">Calendar</Link>
-            </li>
-            <li>
-              <Link to="/logbook">Logbook</Link>
-            </li>
-            <li>
-              <Link to="/fieldguide">fieldguide</Link>
-            </li>
-            <li>
-              <Link to="/maps">Maps</Link>
-            </li>
-          </ul>
-        </nav>
+  const [displayFooter, toggleFooter] = useState(true);
 
+ 
+  return (
+    
+    <Router>
+      {/* <div> */}
+        <Header />
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/logbook">
-            <Logbook />
-          </Route>
-          <Route path="/fieldguide">
-            <Fieldguide />
-          </Route>
-          <Route path="/maps">
-            <Maps />
-          </Route>
-          <Route path="/calendar">
-            <Calendar/>
-          </Route>
+        <Route path="/calendar" component={Calendar}/>
+          
+          {/* <Route path="/fieldguide"> */}
+            {/* <Fieldguide /> */}
+          {/* </Route> */}
+          <Route path="/logbook" component={Logbook}/>
+          <Route path="/maps" component={Maps}/>
+          <Route path="/resources" component={Resources}/>
+          <Route path="/contact" component={Contact}/>
+          <Route path='/lost-in-the-Fieldguide' component={Lost} />
+          
+          <Redirect to='/lost-in-the-Fieldguide'/>
         </Switch>
-      </div>
+        <Footer className={displayFooter ? "footer" : "footer-off"}>
+          <button onClick={() => {toggleFooter(!displayFooter)}}>goodbye</button>
+          </Footer>
     </Router>
+    
   );
 }
 
