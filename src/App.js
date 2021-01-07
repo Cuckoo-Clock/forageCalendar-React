@@ -27,7 +27,7 @@ function App() {
   const FieldguidePage = ({match}) => {
     return(
       <FieldguideEntry
-      specimen={mushrooms.filter(specimen => specimen.binomial.toLowerCase().replace(/\s/g, '-') === match.params.id)[0]}
+      specimen={mushrooms.filter(specimen => specimen.binomial.toLowerCase().replace(/\s/g, '-') === match.params.binomial)[0]}
       />
     )
     
