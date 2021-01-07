@@ -38,7 +38,7 @@ export const mushrooms = [
         }
     },
     {
-        "binomial": "Binomial Name",
+        "binomial": "Binomial name",
         "names": ["Folksy Name,WYSIWYG"],
         "order":"polyporales",
         "photo":"https://picsum.photos/id/437/200",

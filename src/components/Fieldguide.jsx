@@ -8,15 +8,20 @@ function MushroomRouter({mushrooms}) {
     
     const fieldguide = mushrooms.map( mushroom => {
         let id = mushroom.binomial.toLowerCase().replace(/\s/g, '-');
-    
+  
         return(
-            <Link key={id} to={`/fieldguide/${id}`}>
+            <>
+            <Link onClick={()=>{console.log(id)}} key={id} to={`/fieldguide/${id}`}>
             <div className="fieldguide-item" > 
                 <img src={mushroom.photo} alt={mushroom.binomial}/>
                 <p>{mushroom.names}</p>
                 <p>{mushroom.binomial}</p>
             </div>
             </Link>
+            <Route>
+
+            </Route>
+            </>
         );
     });
     return(

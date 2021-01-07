@@ -1,7 +1,7 @@
 
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
-import React, { useState } from 'react';
+import React, { Component, useState } from 'react';
 
 import Header from './components/Header';
 import Footer from "./components/Footer";
@@ -17,22 +17,32 @@ import FieldguideEntry from './components/FieldguideEntry';
 import { mushrooms } from "./shared/mushroomIndex";
 
 
+
 //bring the mushrooms into state at this level.
 
-function App() {
-  
-  
-  const [displayFooter, toggleFooter] = useState(true);
 
+
+class App extends Component{
+  constructor(props){
+    super(props)
+    this.state= {mushrooms: mushrooms}
+  }
+  
+ 
+  
+ render(){
   const FieldguidePage = ({match}) => {
+    
+    console.log('gone to it')
     return(
-      <FieldguideEntry
-      specimen={mushrooms.filter(specimen => specimen.binomial.toLowerCase().replace(/\s/g, '-') === match.params.id)[0]}
+      
+      <FieldguideEntry 
+      specimen={this.state.mushrooms.filter(mushroom => mushroom.binomial.toLowerCase().replace(/\s/g, '-') === match.params.binomial)[0] }
       />
     )
     
   }
- 
+
   return (
     
     <Router>
@@ -42,9 +52,11 @@ function App() {
             renders the first one that matches the current URL. */}
         <Switch>
         <Route path="/calendar" component={Calendar}/>
-          <Route path="/fieldguide" component={Fieldguide}/>
+          <Route  exact path ="/fieldguide/" component={Fieldguide}/>
           <Route path='/fieldguide/:binomial' component={FieldguidePage} />
-          <Route path="/logbook" component={Logbook}/>
+          <Route path='/fieldguide/:binomial' component={FieldguidePage} />
+          
+          <Route exact path="/logbook" component={Logbook}/>
           <Route path="/maps" component={Maps}/>
           <Route path="/resources" component={Resources}/>
           <Route path="/contact" component={Contact}/>
@@ -54,12 +66,13 @@ function App() {
         </Switch>
 
 
-        <Footer className={displayFooter ? "footer" : "footer-off"}>
-          <button onClick={() => {toggleFooter(!displayFooter)}}>goodbye</button> {/*this is just a state hook test, perhaps can be used for view*/}
+        <Footer className="footer">
+         
           </Footer>
     </Router>
     
   );
+          }
 }
 
 export default App;

@@ -1,4 +1,5 @@
 import  React from "react";
+// import { mushrooms } from "../shared/mushroomIndex";
 
 // "I got props from the link, and that populates me as?
 
@@ -18,7 +19,8 @@ function PhotoDisplay({photo, photos}){ {/* spread operator them together*/}
 
 
 export default function FieldguideEntry({specimen}){
-    
+    // const item = mushrooms.filter(mushroom => mushroom.binomial === specimen)[0]
+    // make some more components that style text sections
     return(
             
               <>
@@ -26,7 +28,7 @@ export default function FieldguideEntry({specimen}){
               <h3>Common Names={specimen.names}</h3>
               
               <img src={specimen.photo} alt={`image of ${specimen.binomial}`}/>
-              {/* <PhotoDisplay photo={specimen.photo} photos={specimen.photos}/> */}
+              <PhotoDisplay photo={specimen.photo} photos={specimen.photos}/>
               <h3>Charactersitics</h3>
               <p>{specimen.description.characteristics}</p>
               <p>{specimen.description.habitat}</p>
