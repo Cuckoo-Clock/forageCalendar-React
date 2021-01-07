@@ -32,8 +32,6 @@ class App extends Component{
   
  render(){
   const FieldguidePage = ({match}) => {
-    
-    console.log('gone to it')
     return(
       
       <FieldguideEntry 
@@ -46,29 +44,23 @@ class App extends Component{
   return (
     
     <Router>
-      {/* <div> */}
+      
         <Header />
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
         <Route path="/calendar" component={Calendar}/>
           <Route  exact path ="/fieldguide/" component={Fieldguide}/>
           <Route path='/fieldguide/:binomial' component={FieldguidePage} />
-          <Route path='/fieldguide/:binomial' component={FieldguidePage} />
-          
-          <Route exact path="/logbook" component={Logbook}/>
+          <Route path="/logbook" component={Logbook}/>
           <Route path="/maps" component={Maps}/>
           <Route path="/resources" component={Resources}/>
           <Route path="/contact" component={Contact}/>
           <Route path='/lost-in-the-Fieldguide' component={Lost} />
-         
+  
           <Redirect to='/lost-in-the-Fieldguide'/>
         </Switch>
 
 
-        <Footer className="footer">
-         
-          </Footer>
+        <Footer className="footer"/>
     </Router>
     
   );

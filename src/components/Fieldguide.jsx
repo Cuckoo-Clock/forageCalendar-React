@@ -18,9 +18,6 @@ function MushroomRouter({mushrooms}) {
                 <p>{mushroom.binomial}</p>
             </div>
             </Link>
-            <Route>
-
-            </Route>
             </>
         );
     });
