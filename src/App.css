@@ -1,7 +1,13 @@
+:root{
+  box-sizing: border-box;
+}
+
 div{
   border: 1px dashed hsl(200,60%,30%)
 }
-
+img{
+  width: 100%;
+}
 .footer{
   font-size: .5rem;
   background: hsla(200, 30%, 50%,.5);
@@ -11,6 +17,15 @@ div{
   display:none;
 }
 
+.fieldguide-item{
+  padding: 1rem;
+  border-radius: .5rem;
+  width: 50%;
+  background: hsla(50,60%,40%,.2);
+}
+.fieldguide-item:hover{
+  background: hsla(50,30%,40%,.4);
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
