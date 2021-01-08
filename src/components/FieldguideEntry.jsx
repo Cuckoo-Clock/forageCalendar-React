@@ -19,13 +19,11 @@ function PhotoDisplay({photo, photos}){ {/* spread operator them together*/}
 
 
 export default function FieldguideEntry({specimen}){
-    // const item = mushrooms.filter(mushroom => mushroom.binomial === specimen)[0]
-    // make some more components that style text sections
     return(
             
               <>
-              <h2>binomial={specimen.binomial}</h2>
-              <h3>Common Names={specimen.names}</h3>
+              <h2><i>{specimen.binomial}</i></h2>
+              <h3>{`Common Names: ${specimen.names.join(", ")}`}</h3>
               
               <img src={specimen.photo} alt={`image of ${specimen.binomial}`}/>
               <PhotoDisplay photo={specimen.photo} photos={specimen.photos}/>
@@ -37,7 +35,7 @@ export default function FieldguideEntry({specimen}){
               */}
               <h3>Look Alikes</h3>
               {/* <PhotoDisplay photos={specimen.lookAlikes}/> */}
-              <h3>Edibility: {specimen.edibilty}</h3>
+              <h3>Edibility: {specimen.edibility}</h3>
               <p>{specimen.cooking.notes}</p>
               <h4>Recipes</h4>
               <ul>

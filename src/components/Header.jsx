@@ -14,7 +14,7 @@ export default function Header(){
               <Link to="/logbook">Logbook</Link>
             </li>
             <li>
-              <Link to="/fieldguide">fieldguide</Link>
+              <Link to="/fieldguide">Fieldguide</Link>
             </li>
             <li>
               <Link to="/maps">Maps</Link>

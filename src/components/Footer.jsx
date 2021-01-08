@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 export default function Footer(props){
     return(
         <div className={props.className}>
-            <p>footer</p>
             <nav>
+            <Link to="/safepractices"><h3>Notes on Safe and Sustainable Foraging</h3></Link>
           <ul>
             <li>
               <Link to="/calendar">Calendar</Link>
@@ -15,7 +15,7 @@ export default function Footer(props){
               <Link to="/logbook">Logbook</Link>
             </li>
             <li>
-              <Link to="/fieldguide">fieldguide</Link>
+              <Link to="/fieldguide">Fieldguide</Link>
             </li>
             <li>
               <Link to="/maps">Maps</Link>

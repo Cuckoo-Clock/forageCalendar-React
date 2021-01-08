@@ -13,6 +13,7 @@ import Resources from './components/Reources';
 import Lost from "./components/Lost";
 import Contact from "./components/Contact";
 import FieldguideEntry from './components/FieldguideEntry';
+import Safepractices from "./components/Safepractices";
 
 import { mushrooms } from "./shared/mushroomIndex";
 
@@ -50,6 +51,7 @@ class App extends Component{
         <Route path="/calendar" component={Calendar}/>
           <Route  exact path ="/fieldguide/" component={Fieldguide}/>
           <Route path='/fieldguide/:binomial' component={FieldguidePage} />
+          <Route path='/safepractices' component={Safepractices}/>
           <Route path="/logbook" component={Logbook}/>
           <Route path="/maps" component={Maps}/>
           <Route path="/resources" component={Resources}/>

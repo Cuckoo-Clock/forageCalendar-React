@@ -1,7 +1,7 @@
 export const mushrooms = [
     {
         "binomial": "Grifola frondosa",
-        "names": ["hen-of–the-woods","maitake","ram's head","sheep's head"],
+        "names": ["Hen-of–the-woods","Maitake","Ram's head","Sheep's head"],
         "order":"polyporales",
         "photo":"/assets/mushrooms/grifolaFrondosa/main.jpg",
         "photos":["photo1","photo2"],
@@ -11,15 +11,15 @@ export const mushrooms = [
         },
         "dangerFlag":"none",
         "lookAlikes":"berkley's polypore",
-        "edibility":["delicious"],
+        "edibility":"Delicious",
         "cooking":{
-            "notes":"delicious,can be lightly sauteed and frozen, good as a main",
+            "notes":"A choice find, which can be lightly sauteed and frozen, good as a main",
             "recipes":["https://www.bonappetit.com/recipe/seared-maitake-mushrooms","https://veganinthefreezer.com/grilled-thai-marinated-maitake-mushrooms/"]
         }
     },
     {
         "binomial": "Laetiporus sulphureus",
-        "names": ["chicken-of-the-woods,crab-of-the-woods,sulphur shelf"],
+        "names": ["Chicken-of-the-woods", "Crab-of-the-woods", "Sulphur shelf"],
         "order":"polyporales",
         "photo":"/assets/mushrooms/laetiporusSulphureus/main.jpg",
         "photos":["photo1","photo2"],
