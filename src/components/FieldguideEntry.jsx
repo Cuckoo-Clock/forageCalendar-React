@@ -35,6 +35,8 @@ function PhotoDisplay({ photo, photos }) {
 export default function FieldguideEntry({ specimen }) {
   return (
     <>
+      <p>breadcrumbs fieldguide//{specimen.binomial}</p>
+      <br />
       <h2>
         <i>{specimen.binomial}</i>
       </h2>

@@ -1,21 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
-function LoginModal(){
-    return(
-        <>
-        {/*  <Modal> */} {/* whadda i need to import?*/}
-        <p>it's a login modal</p>
-        {/*  </Modal> */}
-        </>
-    );
+function LoginModal() {
+  // return <Form />;
 }
 
-export default function Logbook(){
-    return(
-        <div>
-            <LoginModal />
-            <p>Logbook</p>
-            <p>immediate load of login modal</p>
-        </div>
-    );
+// use oauth?
+
+// https://www.telerik.com/blogs/how-to-build-custom-forms-react-hooks
+// https://rangle.io/blog/simplifying-controlled-inputs-with-hooks/
+
+export default function Logbook() {
+  return (
+    <div>
+      <LoginModal />
+      <p>Logbook</p>
+      <p>immediate load of login modal</p>
+    </div>
+  );
 }
