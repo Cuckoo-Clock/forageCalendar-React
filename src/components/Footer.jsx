@@ -19,7 +19,7 @@ export default function Footer(props) {
             <Link to="/fieldguide">Fieldguide</Link>
           </li>
           <li>
-            <Link to="/maps">Maps</Link>
+            <Link to="/publiclands">Public Lands</Link>
           </li>
           <li>
             <Link to="/resources">Further Resources</Link>

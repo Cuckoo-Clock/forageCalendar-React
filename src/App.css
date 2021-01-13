@@ -32,6 +32,12 @@ img {
   background: hsla(50, 30%, 40%, 0.4);
 }
 
+#public-lands {
+  height: 50vh;
+}
+
+/* // not used */
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

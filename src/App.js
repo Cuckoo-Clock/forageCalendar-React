@@ -12,12 +12,12 @@ import Footer from "./components/Footer";
 import Calendar from "./components/Calendar";
 import Logbook from "./components/Logbook";
 import Fieldguide from "./components/Fieldguide";
-import Maps from "./components/Maps";
 import Resources from "./components/Reources";
 import Lost from "./components/Lost";
 import Contact from "./components/Contact";
 import FieldguideEntry from "./components/FieldguideEntry";
 import Safepractices from "./components/Safepractices";
+import PublicLands from "./components/PublicLands";
 
 import { mushrooms } from "./shared/mushroomIndex";
 import Backend from "./components/Backend";
@@ -54,7 +54,7 @@ class App extends Component {
           <Route path="/fieldguide/:binomial" component={FieldguidePage} />
           <Route path="/safepractices" component={Safepractices} />
           <Route path="/logbook" component={Logbook} />
-          <Route path="/maps" component={Maps} />
+          <Route path="/publiclands" component={PublicLands} />
           <Route path="/resources" component={Resources} />
           <Route path="/contact" component={Contact} />
           <Route path="/lost-in-the-Fieldguide" component={Lost} />

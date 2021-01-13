@@ -1,8 +1,7 @@
 import React from "react";
 import { mushrooms } from "../shared/mushroomIndex";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import BinomialEntry from "./FieldguideEntry";
+import { BrowserRouter as Link } from "react-router-dom";
 
 function MushroomRouter({ mushrooms }) {
   const fieldguide = mushrooms.map((mushroom) => {

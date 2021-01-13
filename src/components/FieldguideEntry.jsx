@@ -20,6 +20,8 @@ function PhotoDisplay({ photo, photos }) {
     // slice the name to get evrything from the end until the slash
     return (
       <a onClick={toggleThumb}>
+        {" "}
+        {/*should this be a button?*/}
         <img src={image} alt={imgName} />
       </a>
     );
