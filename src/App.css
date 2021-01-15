@@ -3,6 +3,7 @@
 }
 
 div {
+  padding: 1rem;
   border: 1px dashed hsl(200, 60%, 30%);
 }
 img {
@@ -34,6 +35,13 @@ img {
 
 #public-lands {
   height: 50vh;
+}
+
+.show {
+  display: inherit;
+}
+.hide {
+  display: none;
 }
 
 /* // not used */

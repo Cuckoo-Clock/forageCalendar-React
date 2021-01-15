@@ -1,10 +1,9 @@
 import React from "react";
-import { mushrooms } from "../shared/mushroomIndex";
 
 import { BrowserRouter as Link } from "react-router-dom";
 
-function MushroomRouter({ mushrooms }) {
-  const fieldguide = mushrooms.map((mushroom) => {
+function MushroomRouter(props) {
+  const fieldguide = props.mushrooms.map((mushroom) => {
     let id = mushroom.binomial.toLowerCase().replace(/\s/g, "-");
 
     return (
@@ -28,12 +27,12 @@ function MushroomRouter({ mushrooms }) {
   return <>{fieldguide}</>;
 }
 
-export default function Fieldguide() {
+export default function Fieldguide(props) {
   return (
     <div>
       <p>breadcrumbs fieldguide//</p>
       <br />
-      <MushroomRouter mushrooms={mushrooms} />
+      <MushroomRouter mushrooms={props.mushrooms} />
     </div>
   );
 }
