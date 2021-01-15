@@ -13,7 +13,7 @@ function MushroomRouter({ mushrooms }) {
           onClick={() => {
             console.log(id);
           }}
-          key={id}
+          key={mushroom.key}
           to={`/fieldguide/${id}`}
         >
           <div className="fieldguide-item">

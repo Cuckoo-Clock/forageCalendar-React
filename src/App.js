@@ -25,25 +25,10 @@ import Backend from "./components/Backend";
 
 //bring the mushrooms into state at this level.
 
-<<<<<<< HEAD
-function App() {
-  
-  
-  const [displayFooter, toggleFooter] = useState(true);
-
-  const FieldguidePage = ({match}) => {
-    return(
-      <FieldguideEntry
-      specimen={mushrooms.filter(specimen => specimen.binomial.toLowerCase().replace(/\s/g, '-') === match.params.binomial)[0]}
-      />
-    )
-    
-=======
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = { mushrooms: mushrooms };
->>>>>>> makeAppstately
   }
 
   render() {

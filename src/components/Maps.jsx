@@ -53,7 +53,7 @@ export const RenderLocations = ({ locations, children }) => {
 
 // provides a maps link street address to assist in getting there?
 export const RenderPublicLandsinfo = ({ location }) => {
-  const addressQuery = location.address.replace(/\s/g, "+").replace(/\,/g, "");
+  const addressQuery = location.address.replace(/\s/g, "+").replace(/,/g, "");
   return (
     <>
       <a
