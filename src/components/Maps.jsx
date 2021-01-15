@@ -1,3 +1,4 @@
+import { marker } from "leaflet";
 import React, { useState, useCallback, useEffect, useMemo } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
@@ -31,12 +32,17 @@ export const RenderMap = ({ containerID, initialLocation, children }) => {
 //future addition a circle or svg map overlay
 
 export const RenderLocations = ({ locations, children }) => {
+  // const [markerz, updateMarker] = useState(null);
   const markers = locations.map((location) => {
+    const childrenWithProps = React.cloneElement(children, {
+      location: location,
+    });
+
     return (
       <Marker position={location.location} key={location.key}>
         <Popup>
-          <span>{location.name}</span>
-          {children}
+          <h3>{location.name}</h3>
+          {childrenWithProps}
         </Popup>
       </Marker>
     );
@@ -45,16 +51,37 @@ export const RenderLocations = ({ locations, children }) => {
   return markers;
 };
 
+// provides a maps link street address to assist in getting there?
+export const RenderPublicLandsinfo = ({ location }) => {
+  const addressQuery = location.address.replace(/\s/g, "+").replace(/\,/g, "");
+  return (
+    <>
+      <a
+        href={`https://maps.google.com/?&daddr=${addressQuery}`}
+        target="blank"
+      >
+        <p>Current Weather</p>
+        <p>Upcoming Weather</p>
+        <p>Previous weather</p>
+        <p>sky cover</p>
+        {location.address}
+      </a>
+    </>
+  );
+};
+
 //For the logbook section
 // renders popup text for forage finds for user logbook section
-export const RenderForageFindsLocations = (locations) => {
+
+export const RenderForageFindsInfo = (locations) => {
   const finds = (
     <>
       <p>"pip"</p>
       {/* should display thumbnail photo */}
       {/* date with seasonal indicator... in logbook saving some weather data would be good as well*/}
       {/* naem of specimen */}
-      {/* /link to entry */}
+      {/* NOtes*/}
+      {/* /link to fieldguid entry */}
     </>
   );
 
@@ -63,13 +90,31 @@ export const RenderForageFindsLocations = (locations) => {
 
 //subcomponents
 
-// rendeers locations the the
-export const RenderListofLocations = (locations) => {
-  return (
-    <>
-      <p>pip</p>
-    </>
-  );
+// rendeers list of locations marked on the map in a seperate div
+export const RenderListofLocations = ({ locations }) => {
+  const shiftFocus = (ev) => {
+    const el = ev.target;
+    console.log(el);
+  };
+  const locationList = locations.map((location) => {
+    if (location.weather) {
+      //finds
+      return <></>;
+    } else {
+      // public lands
+      return (
+        //turn this into some sorta card/accordian
+        <a key={location.key} onClick={shiftFocus}>
+          <div>
+            <h3>{location.name}</h3>
+            <p>{location.desc}</p>
+          </div>
+        </a>
+      );
+    }
+  });
+
+  return <>{locationList}</>;
 };
 
 ///////////////////

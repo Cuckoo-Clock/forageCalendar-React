@@ -1,5 +1,6 @@
 export const mushrooms = [
   {
+    key: 1,
     binomial: "Grifola frondosa",
     names: ["Hen-of–the-woods", "Maitake", "Ram's head", "Sheep's head"],
     order: "polyporales",
@@ -26,6 +27,7 @@ export const mushrooms = [
     },
   },
   {
+    key: 2,
     binomial: "Laetiporus sulphureus",
     names: ["Chicken-of-the-woods", "Crab-of-the-woods", "Sulphur shelf"],
     order: "polyporales",
@@ -54,6 +56,7 @@ export const mushrooms = [
     },
   },
   {
+    key: 3,
     binomial: "Binomial name",
     names: ["Folksy Name,WYSIWYG"],
     order: "polyporales",

@@ -4,8 +4,8 @@ import {} from "react-leaflet";
 import {
   RenderMap,
   RenderLocations,
-  ExternalStateExample,
-  DisplayPosition,
+  RenderPublicLandsinfo,
+  RenderListofLocations,
 } from "./Maps";
 
 export default function PublicLands() {
@@ -16,8 +16,11 @@ export default function PublicLands() {
     <>
       <div>
         <RenderMap containerID="public-lands" initialLocation={ri}>
-          <RenderLocations locations={publicLands} />
+          <RenderLocations locations={publicLands}>
+            <RenderPublicLandsinfo />
+          </RenderLocations>
         </RenderMap>
+        <RenderListofLocations locations={publicLands} />
       </div>
     </>
   );

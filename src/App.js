@@ -18,6 +18,7 @@ import Contact from "./components/Contact";
 import FieldguideEntry from "./components/FieldguideEntry";
 import Safepractices from "./components/Safepractices";
 import PublicLands from "./components/PublicLands";
+import ForageLogger from "./components/ForageLogger";
 
 import { mushrooms } from "./shared/mushroomIndex";
 import Backend from "./components/Backend";
@@ -54,6 +55,7 @@ class App extends Component {
           <Route path="/fieldguide/:binomial" component={FieldguidePage} />
           <Route path="/safepractices" component={Safepractices} />
           <Route path="/logbook" component={Logbook} />
+          {/* <Route path="/lo">  ForageLogger?*/}
           <Route path="/publiclands" component={PublicLands} />
           <Route path="/resources" component={Resources} />
           <Route path="/contact" component={Contact} />

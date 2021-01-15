@@ -1,6 +1,8 @@
 // JSON for usr logbook
 
-//us the key and the binomial to make a folder name
+// use the key and the binomial to make a folder name which stores photos.
+// links to the fieldguide can be found in relationship to the name
+//
 
 find = [
   {
