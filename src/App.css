@@ -1,38 +1,48 @@
-:root{
+:root {
   box-sizing: border-box;
 }
 
-div{
-  border: 1px dashed hsl(200,60%,30%)
+div {
+  border: 1px dashed hsl(200, 60%, 30%);
 }
-img{
+img {
   width: 100%;
 }
-.footer{
-  font-size: .5rem;
-  background: hsla(200, 30%, 50%,.5);
+.footer {
+  font-size: 0.5rem;
+  background: hsla(200, 30%, 50%, 0.5);
 }
 
-.footer-off{
-  display:none;
+.footer-off {
+  display: none;
 }
 
-.fieldguide-item{
+#thumbs {
+  width: 60vw;
+  overflow: hidden;
+}
+
+.fieldguide-item {
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   width: 50%;
-  background: hsla(50,60%,40%,.2);
+  background: hsla(50, 60%, 40%, 0.2);
 }
-.fieldguide-item:hover{
-  background: hsla(50,30%,40%,.4);
+.fieldguide-item:hover {
+  background: hsla(50, 30%, 40%, 0.4);
 }
+
+#public-lands {
+  height: 50vh;
+}
+
+/* // not used */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 
 @keyframes App-logo-spin {
   from {
@@ -42,4 +52,3 @@ img{
     transform: rotate(360deg);
   }
 }
-
